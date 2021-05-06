@@ -2,13 +2,9 @@ def get_sectets():
     name, loginToken, studentID = [], [], []
     while True:
         try:
-            users = input()
+            users = Input()
             info = users.split(',')
-            name.append(info[0])
-            loginToken.append(info[1])
-            studentID.append(info[2])
-            checkinfo["{0}".format(name)] = {["{0}".format(
-                loginToken), "{0}".format(studentID)]}
+            checkinfo[info[0]] = [info[1], info[2]]
             return checkinfo
         except:
             break
