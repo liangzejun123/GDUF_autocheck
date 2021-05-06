@@ -1,7 +1,5 @@
-if __name__ == "__main__":
-    # sectets字段录入
+def get_sectets():
     name, loginToken, studentID = [], [], []
-    checkinfo = {}
     while True:
         try:
             users = input()
@@ -9,7 +7,14 @@ if __name__ == "__main__":
             name.append(info[0])
             loginToken.append(info[1])
             studentID.append(info[2])
-            return checkinfo[name] = [loginToken, studentID]
+            checkinfo[name] = [loginToken, studentID]
+            return checkinfo
         except:
             break
+
+
+if __name__ == "__main__":
+    # sectets字段录入
+    checkinfo = {}
+    get_sectets()
     print(checkinfo)
