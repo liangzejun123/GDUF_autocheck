@@ -1,7 +1,6 @@
 import requests
 import json
 import time
-import os
 
 
 # 易班打卡
@@ -67,19 +66,25 @@ def tuisong(err):
     print(data)
 
 
-if __name__ == "__main__":
-    # sectets字段录入
-    name, loginToken, studentID = [], [], []
-    checkinfo = {}
+# 未完善的改良
+def get_sectets(users):
     while True:
         try:
-            users = input()
             info = users.split(',')
-            #name.append(info[0])
-            #loginToken.append(info[1])
-            #studentID.append(info[2])
             checkinfo[info[0]] = [info[1], info[2]]
+            return checkinfo
         except:
             break
-    print(checkinfo)
-    main(checkinfo)
+
+
+if __name__ == "__main__":
+    # sectets字段录入
+    users = input()
+
+    # 调用改良
+    # checkinfo = {}
+    # get_sectets(users)
+    # print(checkinfo)
+
+    # 调用原版
+    main(users)
