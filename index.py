@@ -80,8 +80,8 @@ def get_sectets(users):
 if __name__ == "__main__":
     # sectets字段录入
     users = input()
-    users = json.loads(users)
-    
+    users = json.dumps(users)
+
     # 调用改良
     # checkinfo = {}
     # get_sectets(users)
