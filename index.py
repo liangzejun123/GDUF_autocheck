@@ -81,7 +81,7 @@ if __name__ == "__main__":
     # sectets字段录入
     users = input()
     users = json.dumps(users)
-
+    print(type(users))
     # 调用改良
     # checkinfo = {}
     # get_sectets(users)
