@@ -9,7 +9,7 @@ if __name__ == "__main__":
             name.append(info[0])
             loginToken.append(info[1])
             studentID.append(info[2])
-            # checkinfo[name] = [loginToken, studentID]
+            checkinfo[name] = [loginToken, studentID]
         except:
             break
-    print(name)
+    print(checkinfo)
