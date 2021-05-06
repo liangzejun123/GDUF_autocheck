@@ -1,3 +1,4 @@
+# 未完善的改良
 def get_sectets(users):
     while True:
         try:
@@ -10,7 +11,12 @@ def get_sectets(users):
 
 if __name__ == "__main__":
     # sectets字段录入
-    checkinfo = {}
     users = input()
-    get_sectets(users)
-    print(checkinfo)
+
+    # 调用改良
+    # checkinfo = {}
+    # get_sectets(users)
+    # print(checkinfo)
+
+    # 调用原版
+    print(users)
