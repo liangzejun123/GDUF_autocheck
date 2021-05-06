@@ -7,7 +7,7 @@ import time
 def main(checkinfo):
     date = time.strftime("%Y-%m-%d", time.localtime())
     i = 0
-    L = list(checkinfo.keys())
+    L = list(json.loads(checkinfo))
     L.sort()
     err = {}
     while i < len(checkinfo):
