@@ -81,4 +81,5 @@ if __name__ == "__main__":
             checkinfo[name] = [loginToken, studentID]
         except:
             break
+    print(checkinfo)
     main(checkinfo)
