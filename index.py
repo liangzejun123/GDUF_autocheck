@@ -1,7 +1,6 @@
-def get_sectets():
+def get_sectets(users):
     while True:
         try:
-            users = Input()
             info = users.split(',')
             checkinfo[info[0]] = [info[1], info[2]]
             return checkinfo
@@ -12,5 +11,6 @@ def get_sectets():
 if __name__ == "__main__":
     # sectets字段录入
     checkinfo = {}
-    get_sectets()
+    users = input()
+    get_sectets(users)
     print(checkinfo)
