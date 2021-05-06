@@ -1,10 +1,12 @@
 import requests
 import json
 import time
+import ast
 
 
 # 易班打卡
 def main(checkinfo):
+    global date
     date = time.strftime("%Y-%m-%d", time.localtime())
     i = 0
     L = list(checkinfo.keys())
@@ -80,9 +82,8 @@ def get_sectets(users):
 if __name__ == "__main__":
     # sectets字段录入
     users = input()
-    print(users)
-    users = json.dumps(users)
-    users = json.loads(users)
+    users = ast.literal_eval(users)
+
     # 调用改良
     # checkinfo = {}
     # get_sectets(users)
