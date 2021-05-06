@@ -1,4 +1,4 @@
-def get_sectets(name, loginToken, studentID):
+def get_sectets():
     name, loginToken, studentID = [], [], []
     while True:
         try:
@@ -17,5 +17,5 @@ def get_sectets(name, loginToken, studentID):
 if __name__ == "__main__":
     # sectets字段录入
     checkinfo = {}
-    get_sectets(name, loginToken, studentID)
+    get_sectets()
     print(checkinfo)
