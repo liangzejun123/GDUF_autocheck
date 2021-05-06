@@ -7,7 +7,7 @@ import time
 def main(checkinfo):
     date = time.strftime("%Y-%m-%d", time.localtime())
     i = 0
-    L = list(json.loads(checkinfo))
+    L = list(checkinfo.keys())
     L.sort()
     err = {}
     while i < len(checkinfo):
@@ -80,7 +80,8 @@ def get_sectets(users):
 if __name__ == "__main__":
     # sectets字段录入
     users = input()
-
+    users = json.loads(users)
+    
     # 调用改良
     # checkinfo = {}
     # get_sectets(users)
