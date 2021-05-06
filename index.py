@@ -1,5 +1,4 @@
 def get_sectets():
-    name, loginToken, studentID = [], [], []
     while True:
         try:
             users = Input()
