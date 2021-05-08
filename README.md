@@ -1,12 +1,12 @@
 ## GDUF_autocheck
 
 **广东金融学院易广金健康打卡**
-- 支持多人打卡👨‍👩‍👧‍👧
-- 正在完善Server酱微信通知打卡结果💬
-- 目前仅支持固定校内打卡🏫
-- 基于Github Actions，完全解放你的设备和服务器✔
+- [x] 支持多人打卡👨‍👩‍👧‍👧
+- [x] 正在完善Server酱微信通知打卡结果💬
+- [x] 目前仅支持固定校内打卡🏫
+- [x] 基于Github Actions，完全解放你的设备和服务器✔
+- [ ] 正在改善sectets提交方法！
 - 有任何问题可以提交[issues](https://github.com/feizao67/GDUF_autocheck/issues/new)  
-- 正在改善sectets提交方法！！
 
 ## 使用方法
 - Star并Fork此项目。
