@@ -1,15 +1,13 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
-name: Python application
+name: GDUF_autocheck
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  schedule:
-    - cron: 0 8 * * * 
+  workflow_dispatch: # 手动触发
+  schedule: # 计划任务触发
+    - cron: "0 0 * * *" # cron表达式，Actions时区是UTC时间，所以要往前推8个小时
 
 jobs:
   build:
@@ -18,6 +16,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
+    # 设置服务器时区为东八区 
+    - name: Set time zone
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
