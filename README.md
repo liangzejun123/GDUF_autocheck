@@ -4,7 +4,7 @@
 - 支持多人打卡👨‍👩‍👧‍👧
 - 正在完善Server酱微信通知打卡结果💬
 - 目前仅支持固定校内打卡🏫
-- 基于Github Actions，完全解放你的设备和服务器✔
+- 基于Github Actions，完全解放你的设备和服务器✔Action配置有问题，暂时无法定时运行...
 - 有任何问题可以提交[issues](https://github.com/feizao67/GDUF_autocheck/issues/new)  
 - 正在改善sectets提交方法！！
 
