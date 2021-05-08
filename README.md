@@ -22,7 +22,7 @@ GDUF_autocheck
 
 备注：<br>
 ①理论上Value格式填写正确，可添加无限用户<br>
-②如何获取[logintoken](如何获取 logintoken.pdf) <br>
+②如何获取[logintoken](如何获取logintoken.pdf) <br>
 ③上一步的教程后续补上<br>
 ④若完善好Server酱推送，上述Value格式将会改变
 
