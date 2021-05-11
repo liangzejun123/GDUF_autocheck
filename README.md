@@ -12,7 +12,7 @@ GDUF_autocheck
 - [ ] 正在改善Secrets提交方法！
 
 ## 使用方法
-- Star并Fork此项目。
+- Star并Fork此项目。<br>
 [Github fork 别人的项目源作者更新后如何同步更新](https://blog.csdn.net/zhongzunfa/article/details/80344585)
 - 进入你的仓库，Settings → Secrets,
 - 添加2个 Secrets（利用Secrets解决隐私问题）：
