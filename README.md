@@ -9,7 +9,7 @@ GDUF_autocheck
 - [x] 支持Server酱微信通知打卡结果💬
 - [x] 目前仅支持固定校内打卡🏫（默认地址是肇庆校区，本部的朋友需要到[index.py](index.py)自行改一下地址哈）
 - [x] 基于Github Actions定时每日早上8:00自动打卡，完全解放你的设备和服务器✔
-- [ ] 正在改善sectets提交方法！！
+- [ ] 正在改善sectets提交方法！
 
 ## 使用方法
 - Star并Fork此项目。
