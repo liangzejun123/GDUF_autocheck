@@ -6,7 +6,7 @@ GDUF_autocheck
 
 **广东金融学院易广金健康打卡**
 - [x] 支持多人打卡👨‍👩‍👧‍👧
-- [x] 正在完善Server酱微信通知打卡结果💬
+- [x] 支持Server酱微信通知打卡结果💬
 - [x] 目前仅支持固定校内打卡🏫（默认地址是肇庆校区，本部的朋友需要到[index.py](index.py)自行改一下地址哈）
 - [x] 基于Github Actions定时每日早上8:00自动打卡，完全解放你的设备和服务器✔
 - [ ] 正在改善sectets提交方法！
@@ -14,7 +14,7 @@ GDUF_autocheck
 ## 使用方法
 - Star并Fork此项目。
 - 进入你的仓库，Settings → Secrets,
-- 添加1个 Secret（利用secret解决隐私问题）：
+- 添加2个 Secret（利用secret解决隐私问题）：
 
 |Name |Value                                                        |
 |:----|:------------------------------------------------------------|
@@ -24,7 +24,7 @@ GDUF_autocheck
 备注：<br>
 ①理论上Value格式填写正确，可添加无限用户<br>
 ②如何获取[logintoken](如何获取logintoken.pdf) <br>
-③若完善好Server酱推送，上述Value格式将会改变
+③如何获取[SCKEY](如何获取SCKEY.pdf)
 
 ## 与我联系
 - 有任何问题可以提交[issues](https://github.com/feizao67/GDUF_autocheck/issues/new)  
