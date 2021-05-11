@@ -19,6 +19,7 @@ GDUF_autocheck
 |Name |Value                                                        |
 |:----|:------------------------------------------------------------|
 |USERS|{"名字":["logintoken","学号"],"名字2":["logintoken2","学号2"]}|
+|SCKEY|SCUxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx      |
 
 备注：<br>
 ①理论上Value格式填写正确，可添加无限用户<br>

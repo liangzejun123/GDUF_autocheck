@@ -2,6 +2,7 @@ import requests
 import json
 import time
 import ast
+import os
 
 
 # 易班打卡
@@ -62,17 +63,16 @@ def post(loginToken, studentID):
 # 推送判断
 def tuisong(err):
     # Server酱推送
-    api = "https://sc.ftqq.com/"
+    api = "https://sc.ftqq.com/{0}.send".format(SCKEY)
     data = {"text": "易班打卡异常提醒", "desp": str(err)}
-    # req = requests.post(api, data=data)
-    print(data)
+    req = requests.post(api, data=data)
 
 
 # 未完善的改良
-def get_sectets(users):
+def get_sectets(USERS):
     while True:
         try:
-            info = users.split(',')
+            info = USERS.split(',')
             checkinfo[info[0]] = [info[1], info[2]]
             return checkinfo
         except:
@@ -81,13 +81,14 @@ def get_sectets(users):
 
 if __name__ == "__main__":
     # sectets字段录入
-    users = input()
-    users = ast.literal_eval(users)
+    SCKEY = os.environ["SCKEY"]
+    USERS = os.environ["USERS"]
+    USERS = ast.literal_eval(USERS)
 
     # 调用改良
     # checkinfo = {}
-    # get_sectets(users)
+    # get_sectets(USERS)
     # print(checkinfo)
 
     # 调用原版
-    main(users)
+    main(USERS)
