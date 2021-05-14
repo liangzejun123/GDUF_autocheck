@@ -25,7 +25,8 @@ GDUF_autocheck
 备注：<br>
 ①理论上USERS项的Value格式填写正确，可添加无限用户<br>
 ②如何获取[logintoken](如何获取logintoken.pdf) <br>
-③如何获取[SCKEY](如何获取SCKEY.pdf)
+③如何获取[SCKEY](如何获取SCKEY.pdf)<br>
+④添加SCKEY这一步为可选步骤（非必要），不添加不会影响打卡，只是当打卡失败时不会向微信推送失败提醒
 
 ## 与我联系
 - 有任何问题可以提交[issues](https://github.com/feizao67/GDUF_autocheck/issues/new)  
