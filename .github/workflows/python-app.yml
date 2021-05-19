@@ -35,4 +35,4 @@ jobs:
         USERS: ${{ secrets.USERS }}
         SCKEY: ${{ secrets.SCKEY }}
       run: |
-        python3 index.py
+        python3 main.py
