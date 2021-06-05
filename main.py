@@ -66,27 +66,11 @@ def tuisong(err):
     req = requests.post(api, data=data)
 
 
-# 未完善的改良
-def get_sectets(USERS):
-    while True:
-        try:
-            info = USERS.split(',')
-            checkinfo[info[0]] = [info[1], info[2]]
-            return checkinfo
-        except:
-            break
-
-
 if __name__ == "__main__":
     # sectets字段录入
     SCKEY = os.environ["SCKEY"]
     USERS = os.environ["USERS"]
     USERS = ast.literal_eval(USERS)
-
-    # 调用改良
-    # checkinfo = {}
-    # get_sectets(USERS)
-    # print(checkinfo)
 
     # 调用原版
     main(USERS)

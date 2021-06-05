@@ -9,13 +9,12 @@ GDUF_autocheck
 - [x] 支持Server酱微信通知打卡结果💬
 - [x] 目前仅支持固定校内打卡🏫（默认地址是肇庆校区，本部的朋友需要到[main.py](main.py)自行改一下地址哈）
 - [x] 基于Github Actions定时每日早上8:00自动打卡，完全解放你的设备和服务器✔
-- [ ] 正在改善Secrets提交方法！
 
 ## 使用方法
 - Star并Fork此项目。<br>
 [Github fork 别人的项目源作者更新后如何同步更新](https://blog.csdn.net/zhongzunfa/article/details/80344585)
 - 进入你的仓库，Settings → Secrets,
-- 添加2个 Secrets（利用Secrets解决隐私问题）：
+- 分别添加下列2个 Secrets（利用Secrets解决隐私问题）：
 
 |Name |Value                                                        |
 |:----|:------------------------------------------------------------|
