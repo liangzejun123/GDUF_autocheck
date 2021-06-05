@@ -1,5 +1,4 @@
 import requests
-import json
 import time
 import ast
 import os
