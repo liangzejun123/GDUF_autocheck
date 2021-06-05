@@ -59,7 +59,7 @@ def post(loginToken, studentID):
 
 # 推送判断
 def tuisong(err):
-    # Server酱推送
+    # 旧版Server酱推送（随时失效，失效后将改用Bark推送）
     api = "https://sc.ftqq.com/{0}.send".format(SCKEY)
     data = {"text": "易班打卡异常提醒", "desp": str(err)}
     req = requests.post(api, data=data)
@@ -71,5 +71,4 @@ if __name__ == "__main__":
     USERS = os.environ["USERS"]
     USERS = ast.literal_eval(USERS)
 
-    # 调用原版
     main(USERS)
