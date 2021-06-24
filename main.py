@@ -32,17 +32,17 @@ def post(loginToken, studentID):
     global yb_result
     session = requests.Session()
     url_1 = "http://f.yiban.cn/iapp378946/i/{0}".format(loginToken)
-    a = session.get(url=url_1, allow_redirects=False)
+    a = session.get(url=url_1, headers=UA, allow_redirects=False)
     url_2 = "http://f.yiban.cn{0}".format(a.headers['Location'])
-    b = session.get(url=url_2, allow_redirects=False)
+    b = session.get(url=url_2, headers=UA, allow_redirects=False)
     if "Location" not in b.headers:
         yb_result = {'code': 555555, 'msg': 'loginToken错误，请修改'}
         return yb_result
     else:
         url_get = b.headers["Location"]
-        c = session.get(url=url_get, allow_redirects=False)
+        c = session.get(url=url_get, headers=UA, allow_redirects=False)
         url_bind = "https://ygj.gduf.edu.cn/Handler/device.ashx?flag=checkBindDevice"
-        bind = session.get(url=url_bind)
+        bind = session.get(url=url_bind, headers=UA)
         url_save = "https://ygj.gduf.edu.cn/Handler/health.ashx?"
         data_yb_save = {
             "flag": "save",
@@ -53,13 +53,13 @@ def post(loginToken, studentID):
             "isTouch": "否",
             "isPatient": "不是"
         }
-        yb_result = session.post(url=url_save, data=data_yb_save).json()
+        yb_result = session.post(url=url_save, headers=UA, data=data_yb_save).json()
         return yb_result
 
 
 # 推送判断
 def tuisong(err):
-    # 旧版Server酱推送（随时失效，失效后将改用Bark推送）
+    # 旧版Server酱推送（随时失效，失效后将改用Bark推送,可留意后续更新）
     api = "https://sc.ftqq.com/{0}.send".format(SCKEY)
     data = {"text": "易班打卡异常提醒", "desp": str(err)}
     req = requests.post(api, data=data)
@@ -70,5 +70,6 @@ if __name__ == "__main__":
     SCKEY = os.environ["SCKEY"]
     USERS = os.environ["USERS"]
     USERS = ast.literal_eval(USERS)
+    UA = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 yiban_iOS/4.9.10"}
 
     main(USERS)
