@@ -62,15 +62,17 @@ def post(loginToken, studentID):
 
 # 推送判断
 def tuisong(err):
-    # 旧版Server酱推送（随时失效，失效后将改用Bark推送,可留意后续更新）
-    api = "https://sc.ftqq.com/{0}.send".format(SCKEY)
-    data = {"text": "易班打卡异常提醒", "desp": str(err)}
-    req = requests.post(api, data=data)
+    error_format = str(err).replace("{", "").replace("}", "").replace("'", "")
+    api = "https://api.day.app/{0}/易班打卡异常提醒/{1}?".format(BARK, error_format)
+    data = {
+        "url": "https://github.com/feizao67/GDUF_autocheck"
+    }
+    send = requests.post(api, data=data)
 
 
 if __name__ == "__main__":
     # sectets字段录入
-    SCKEY = os.environ["SCKEY"]
+    BARK = os.environ["BARK"]
     USERS = os.environ["USERS"]
     USERS = ast.literal_eval(USERS)
     UA = {
