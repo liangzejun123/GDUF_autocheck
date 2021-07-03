@@ -33,6 +33,6 @@ jobs:
     - name: Run
       env:
         USERS: ${{ secrets.USERS }}
-        SCKEY: ${{ secrets.BARK }}
+        BARK: ${{ secrets.BARK }}
       run: |
         python3 main.py
