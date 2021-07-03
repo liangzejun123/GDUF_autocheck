@@ -33,8 +33,10 @@ def post(loginToken, studentID):
     session = requests.Session()
     url_1 = "http://f.yiban.cn/iapp378946/i/{0}".format(loginToken)
     a = session.get(url=url_1, headers=UA, allow_redirects=False)
-    url_2 = "http://f.yiban.cn{0}".format(a.headers['Location'])
-    b = session.get(url=url_2, headers=UA, allow_redirects=False)
+    url_2 = a.headers['Location']
+    header_loginToken = {"loginToken": "{0}".format(loginToken)}
+    b = session.get(url=url_2, headers=header_loginToken,
+                    allow_redirects=False)
     if "Location" not in b.headers:
         yb_result = {'code': 555555, 'msg': 'loginToken错误，请修改'}
         return yb_result
@@ -53,7 +55,8 @@ def post(loginToken, studentID):
             "isTouch": "否",
             "isPatient": "不是"
         }
-        yb_result = session.post(url=url_save, headers=UA, data=data_yb_save).json()
+        yb_result = session.post(
+            url=url_save, headers=UA, data=data_yb_save).json()
         return yb_result
 
 
@@ -70,6 +73,8 @@ if __name__ == "__main__":
     SCKEY = os.environ["SCKEY"]
     USERS = os.environ["USERS"]
     USERS = ast.literal_eval(USERS)
-    UA = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 yiban_iOS/4.9.10"}
+    UA = {
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 yiban_iOS/4.9.10"
+    }
 
     main(USERS)
