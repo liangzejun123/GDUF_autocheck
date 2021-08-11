@@ -15,7 +15,7 @@ def main(checkinfo):
         try:
             post(checkinfo["%s" % L[i]][0], checkinfo["%s" % L[i]][1])
         except KeyError:
-            tuisong("%s" % L[i], "loginToken过期，请修改")
+            tuisong("%s" % L[i], "loginToken过期")
         else:
             if yb_result["code"] != 0:
                 tuisong("%s" % L[i], yb_result["msg"])
@@ -61,7 +61,7 @@ def post(loginToken, address):
 # 推送判断
 def tuisong(name, error):
     api = "https://api.day.app/%s/易班打卡异常提醒/%s %s?" % (BARK, name, error)
-    send = requests.post(url=api)
+    send = requests.get(url=api)
 
 
 if __name__ == "__main__":
