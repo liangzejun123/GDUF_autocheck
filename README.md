@@ -25,7 +25,7 @@ GDUF_autocheck
 
 备注：<br>
 ①理论上USERS项的Value格式填写正确，可添加无限用户<br>
-②```地址```这一参数可以留空（留空则使用肇庆校区的默认地址），但要保留```""```
+②```地址```这一参数可以留空（留空则使用肇庆校区的默认地址），但要保留```""```<br>
 ③如何获取[logintoken](如何获取logintoken.pdf) <br>
 ④BARK的Value填入的是在你的Bark客户端里得到“https://api.day.app/XXXXXXXXXXXXXXXXXXXXXX”后面的那串字符<br>
 ⑤添加BARK这一步为可选步骤（非必要），不添加不会影响打卡，只是当打卡失败时不会向手机推送失败提醒
