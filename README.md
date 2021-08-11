@@ -20,7 +20,7 @@ GDUF_autocheck
 
 |Name |Value                                                        |
 |:----|:------------------------------------------------------------|
-|USERS|{"名字":["logintoken","学号"],"名字2":["logintoken2","学号2"]}|
+|USERS|{"名字":["logintoken","地址"],"名字2":["logintoken2","地址2"]}|
 |BARK |XXXXXXXXXXXXXXXXXXXXXX                                       |
 
 备注：<br>
